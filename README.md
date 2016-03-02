@@ -79,6 +79,11 @@ int main()
 - Now imagine we add another argument to the callback - only 2 places must be
 changed if you are using this library - callback type and the call
 
+## More applications
+- Callback that are called in more general callbacks which are called in even
+more general callback
+- Callback array/vector (since all types are the same after conversion)
+
 ## Brief Docs
 ### sq::convw::convw&lt;Callback&gt; function
 Wraps provided callable type into Convenient Callback
