@@ -137,8 +137,11 @@ which affects performance
 | ref**     | 0 / 0 | 0 / 0   |
 | rvalue    | 0 / 0 | 0 / 0   |
 | rvalue*** | 0 / 2 | 0 / 2   |
+
 &#42; can also be received by rvalue
+
 &#42;&#42; includes const ref, pointer and const pointer
+
 &#42;&#42;&#42; if received by value
 
 ## Requirements
