@@ -75,6 +75,9 @@ int main()
     server.connect();
 }
 ```
+- Think how it would be implemented without this library (not too hard though)
+- Now imagine we add another argument to the callback - only 2 places must be
+changed if you are using this library - callback type and the call
 
 ## Brief Docs
 ### sq::convw::convw&lt;Callback&gt; function
