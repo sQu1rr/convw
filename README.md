@@ -7,6 +7,17 @@ void work(Convw<Cb> callback) { callback(1, 2.0f, 3.0); } // return some values
 
 // then call function, but wee need only x from the passed arguments
 work([](float x) { cout << x << std::endl; }); // outputs: 2
+work([](int x, double y) { cout << x + y << std::endl; }); // outputs: 4
+```
+Since argument types are used to determine which arguments are to be passed,
+natural limitation is that you can only omit arguments based on their order
+```cpp
+using Cb = void (int, int); // required callback signature
+void work(Convw<Cb> callback) { callback(1, 2); } // return some values
+
+work([](int x) { cout << x << std::endl; }); // outputs: 1
+// but we can't access second int without receiving the first in :(
+//work([](int ?y?) { cout << ?y? << std::endl; });
 ```
 
 ## Usage
