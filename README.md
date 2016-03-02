@@ -10,7 +10,7 @@ work([](float x) { cout << x << std::endl; }); // outputs: 2
 work([](int x, double y) { cout << x + y << std::endl; }); // outputs: 4
 ```
 Since argument types are used to determine which arguments are to be passed,
-natural limitation is that you can only omit arguments based on their order
+natural limitation is that you can only omit arguments based on their type order
 ```cpp
 using Cb = void (int, int); // required callback signature
 void work(Convw<Cb> callback) { callback(1, 2); } // return some values
