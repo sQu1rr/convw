@@ -2,6 +2,9 @@
  * @file convw.hpp
  * @brief Convinient Callback Wrapper
  */
+#ifndef SQ_CONVW_HPP
+#define SQ_CONVW_HPP
+
 #include <functional>
 
 #include "belks/mpl.hpp"
@@ -131,3 +134,5 @@ private:
 } // \convw
 
 } // \sq
+
+#endif
