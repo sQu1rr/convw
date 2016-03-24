@@ -109,16 +109,9 @@ template <typename Ret, typename... Args> class Convw<Ret (Args...)> {
 
 public:
     Convw() = default;
-    Convw(const Convw& convw) = default;
-    Convw(Convw& convw) = default;
-    Convw(Convw&& convw) = default;
 
     template <typename Function>
     Convw(Function&& func) noexcept : function_(convw<Callback>(func)) { }
-
-    Convw& operator = (const Convw& convw) = default;
-    Convw& operator = (Convw& convw) = default;
-    Convw& operator = (Convw&& convw) = default;
 
     auto operator () (Args... args) const
     {
