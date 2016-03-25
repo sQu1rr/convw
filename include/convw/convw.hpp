@@ -111,7 +111,8 @@ public:
     Convw() = default;
 
     template <typename Function>
-    Convw(Function&& func) noexcept : function_(convw<Callback>(func)) { }
+    /*implicit*/ Convw(Function&& func) noexcept
+        : function_(convw<Callback>(func)) { }
 
     auto operator () (Args... args) const
     {
